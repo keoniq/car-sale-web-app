@@ -33,7 +33,17 @@ st.dataframe(filtered_df[['model', 'price', 'odometer', 'type', 'condition']].so
 # Scatter plot
 st.subheader("Odometer vs Price")
 st.caption("Note: Some points may overlap. — Created by Keoni Quintana")
+fig_scatter = px.scatter(filtered_df, x='odometer', y='price', hover_data=['model'], title='Odometer vs Price')
+st.plotly_chart(fig_scatter, use_container_width=True)
 
-fig = px.scatter(filtered_df, x='odometer', y='price', hover_data=['model'], title='Odometer vs Price')
-st.plotly_chart(fig, use_container_width=True)
+# Histogram: Price Distribution
+st.subheader("Price Distribution")
+fig_price_hist = px.histogram(filtered_df, x='price', nbins=50, title='Distribution of Vehicle Prices')
+st.plotly_chart(fig_price_hist, use_container_width=True)
+
+# Histogram: Odometer Distribution
+st.subheader("Odometer Distribution")
+fig_odometer_hist = px.histogram(filtered_df, x='odometer', nbins=50, title='Distribution of Vehicle Odometer Readings')
+st.plotly_chart(fig_odometer_hist, use_container_width=True)
+
 
