@@ -32,7 +32,7 @@ st.dataframe(filtered_df[['model', 'price', 'odometer', 'type', 'condition']].so
 
 # Scatter plot
 st.subheader("Odometer vs Price")
-st.caption("Created by Keoni Quintana")
+st.caption("Note: Some points may overlap. — Created by Keoni Quintana")
 
 fig = px.scatter(filtered_df, x='odometer', y='price', hover_data=['model'], title='Odometer vs Price')
 st.plotly_chart(fig, use_container_width=True)
