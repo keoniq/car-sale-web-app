@@ -15,3 +15,31 @@ Follow these steps to run the app on your local machine:
 ```bash
 git clone https://github.com/keoniq/car-sale-web-app-final.git
 cd car-sale-web-app-final
+```
+
+### 2. Create a virtual environment (optional but recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate     # On macOS/Linux
+venv\Scripts\activate        # On Windows
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the app
+
+```bash
+streamlit run app.py
+```
+
+Then open `http://localhost:8501` in your web browser.
+
+## Author
+
+Created by Keoni Quintana
+
